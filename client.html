@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>admin page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
 </head>
 
 <body>
@@ -21,8 +21,9 @@
         <div class="client">
             <li>
                 <a href="#ViewAll">ViewAllClient</a>
-                <a href="#Update">UpdateClient</a>
-                <a href="#Update">DeleteClient</a>
+                <a href="#addClient">AddClient</a>
+                <a href="#UpdateClient">UpdateClient</a>
+                <a href="#deleteClient">DeleteClient</a>
             </li>
                     <!-- "firstName": "Wb",
                     "lastName": "anan",
@@ -50,181 +51,96 @@
                         <th scope="col">clientzoneId</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">4</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">24</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">34</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">44</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">54</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">64</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">74</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">84</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">94</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">94</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">114</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@twitter</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                        <td>@fat</td>
-                      </tr>
+                    <tbody id="clentBody">
+                      
                     </tbody>
                   </table>
             </section>
-              <section id="Update">
-                <form>
-                  
-        
-                    <label><em>firstName</em></label><br>
-                    <input type="text" placeholder="Enter Your Email" name="YourEmail" value=""><br>
-                    <label><em>lastName</em></label><br>
-                    <input type="text" placeholder="Enter Your Password" name="YourPassWord" value=""><br>
-                    <label><em>email</em></label><br>
-                    <input type="email" placeholder="Enter Your Password" name="YourPassWord" value=""><br>
-                    <label><em>clientPassword</em></label><br>
-                    <input type="password" placeholder="Enter Your Password" name="YourPassWord" value=""><br>
-                    <label><em> clientAddress</em></label><br>
-                    <input type="text" placeholder="Enter Your Password" name="YourPassWord" value=""><br>
-                    <label><em>balance</em></label><br>
-                    <input type="number" placeholder="Enter Your Password" name="YourPassWord" value=""><br>
-                    <label><em>paymentPlan</em></label><br>
-                    <input type="text" placeholder="Enter Your Password" name="YourPassWord" value=""><br>
-                    <label><em>clientSectorId</em></label><br>
-                    <input type="number" placeholder="Enter Your Password" name="YourPassWord" value=""><br>
-                    <label><em>clientzoneId</em></label><br>
-                    <input type="number" placeholder="Enter Your Password" name="YourPassWord" value=""><br>
-                    
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> <em>Remember me</em>
-                    </label>
-        
-                </form>
-                <button onclick="">UpdateClient</button>
+            <section id="addClient">
+              <!-- <h1><em>Add Client</em></h1> -->
+            <form>
+            
+                <label><em>firstName</em></label><br>
+                <input id="AddClientFirstName" type="text" placeholder="Enter Your firstName" name="YourEmail" value=""><br>
+                <label><em>lastName</em></label><br>
+                <input id="AddClientLastName" type="text" placeholder="Enter Your lastName" name="YourPassWord" value=""><br>
+                <label><em>email</em></label><br>
+                <input id="AddClientEmailAddress" type="email" placeholder="Enter Your Email" name="YourPassWord" value=""><br>
+                <label><em>clientPassword</em></label><br>
+                <input id="AddClientPassword" type="password" placeholder="Enter Your Password" name="YourPassWord" value=""><br>
+                <label><em> clientAddress</em></label><br>
+                <input id="AddClientAddress" type="text" placeholder="Enter Your Address" name="YourPassWord" value=""><br>
+                <label><em>balance</em></label><br>
+                <input id="AddClientBalance" type="number" placeholder="Enter Your Balance" name="YourPassWord" value=""><br>
+                <label><em>paymentPlan</em></label><br>
+                <input id="AddClientPaymentPlan" type="text" placeholder="Enter Your paymentPlan" name="YourPassWord" value=""><br>
+                <label><em>clientSectorId</em></label><br>
+                <input id="AddClientSectorId" type="number" placeholder="Enter Your Sector Id" name="YourPassWord" value=""><br>
+                <label><em>clientzoneId</em></label><br>
+                <input id="AddClientZoneId" type="number" placeholder="Enter Your Zone Id" name="YourPassWord" value=""><br>
+                
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> <em>Remember me</em>
+                </label>
+    
+            </form>
+    
+            <button id="addClientButton" type="submit">Add</button>
+          </section>
 
-                <button onclick="">DeleteClient</button>
-              </section>
+
+          <section id="UpdateClient" >
+            <!-- <h1><em>Update Client</em></h1> -->
+            <form>
+              <label><em>firstName</em></label><br>
+              <input id="UpdateClientFirstName" type="text" placeholder="Enter Your firstName" name="YourEmail" value=""><br>
+              <label><em>lastName</em></label><br>
+              <input id="UpdateClientLastName" type="text" placeholder="Enter Your lastName" name="YourPassWord" value=""><br>
+              <label><em>email</em></label><br>
+              <input id="UpdateClientEmailAddress" type="email" placeholder="Enter Your Email" name="YourPassWord" value=""><br>
+              <label><em>clientPassword</em></label><br>
+              <input id="UpdateClientPassword" type="password" placeholder="Enter Your Password" name="YourPassWord" value=""><br>
+              <label><em> clientAddress</em></label><br>
+              <input id="UpdateClientAddress" type="text" placeholder="Enter Your Address" name="YourPassWord" value=""><br>
+              <label><em>balance</em></label><br>
+              <input id="UpdateClientBalance" type="number" placeholder="Enter Your Balance" name="YourPassWord" value=""><br>
+              <label><em>paymentPlan</em></label><br>
+              <input id="UpdateClientPaymentPlan" type="text" placeholder="Enter Your paymentPlan" name="YourPassWord" value=""><br>
+              <label><em>clientSectorId</em></label><br>
+              <input id="UpdateClientSectorId" type="number" placeholder="Enter Your Sector Id" name="YourPassWord" value=""><br>
+              <label><em>clientzoneId</em></label><br>
+              <input id="UpdateClientZoneId" type="number" placeholder="Enter Your Zone Id" name="YourPassWord" value=""><br>
+                
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> <em>Remember me</em>
+                </label>
+    
+            </form>
+            <button id="updateClientButton" type="submit">Update</button>
+          </section>
+
+          <section id="deleteClient">
+            <!-- <h1><em>Add Client</em></h1> -->
+          <form>
+          
+            <label><em>id</em></label><br>
+            <input id="deleteClientFirstName" type="text" placeholder="Enter the Id" name="YourEmail" value=""><br>
+            
+              <label>
+                  <input type="checkbox" checked="checked" name="remember"> <em>Remember me</em>
+              </label>
+  
+          </form>
+  
+          <button id="deleteClientButton" type="submit">Delete</button>
+        </section>
         </div>
 
         
         
     </div>
 
-    <script src="app.js" charset="utf-8"></script>
+    <script src="./js/client.js" charset="utf-8"></script>
 
 
 </body>

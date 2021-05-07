@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>admin page</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
+</head>
+
+<body>
+<!-- <img src="/Daily_Quotes/Login/images/backgroundImage.jpg" alt="img"> -->
+    <div class="top-container">
+    
+    </div>
+
+    <div class="middle-container">
+        <div class="client">
+            <li>
+                <a href="#ViewAll">ViewBill</a>
+                <a href="#Update">AddBill</a>
+                <!-- <a href="#Update">DeleteClient</a> -->
+            </li>
+
+            <!-- "balance": 100,
+            "billClientId": 24,
+            "billStaffId": 4 -->
+            <section id="ViewAll">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">balance</th>
+                        <th scope="col">billClientId</th>
+                        <th scope="col">billStaffId</th>
+                      
+                      </tr>
+                    </thead>
+                    <tbody id="billBody">
+                      
+                    </tbody>
+                  </table>
+            </section>
+              <section id="Update">
+                <form>
+                    <label><em>balance</em></label><br>
+                    <input id="balancebill"type="number" placeholder="Enter The Balance" name="YourFirstName" value=""><br>
+                    <label><em>billClientId</em></label><br>
+                    <input id="billClientId" type="number" placeholder="Enter The Client Id" name="YourLastName" value=""><br>
+                    <label><em>billStaffId</em></label><br>
+                    <input id="billStaffId" type="number" placeholder="Enter The Staff Id" name="YourEmail" value=""><br>
+                
+                </form>
+                <button id="AddBillButton" type="submit">AddBill</button>
+
+              </section>
+        </div>
+
+        
+        
+    </div>
+
+    <script src="./js/bill.js" charset="utf-8"></script>
+
+
+</body>
+
+<footer>
+    <!-- <p class="copyright">&copy; <script>
+            document.write(new Date().getFullYear())
+        </script>Serge Anan @Portfolio.</p> -->
+</footer>
+
+</html>

@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Register page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
 
 </head>
 
@@ -21,26 +22,26 @@
             <h1><em>Sing Up</em></h1>
             <!-- <p><em>login to your account</em></p> -->
             <form>
-                <label><em>First Name</em></label><br>
-                <input type="text" placeholder="Enter Your First Name" name="YourFirstName" value=""><br>
-                <label><em>Last Name</em></label><br>
-                <input type="text" placeholder="Enter Your Last Name" name="YourLastName" value=""><br>
-                <label><em>Password</em></label><br>
-                <input type="password" placeholder="Enter Your Password" name="YourPassWord" value=""><br>
-                <label><em>Email</em></label><br>
-                <input type="email" placeholder="Enter Your Email" name="YourEmail" value=""><br>
-                <label><em>City</em></label><br>
-                <input type="text" placeholder="Enter Your City" name="YourLastName" value=""><br>
-                <label><em>Country</em></label><br>
-                <input type="text" placeholder="Enter Your Country" name="YourLastName" value=""><br>
+                <label><em>firstName</em></label><br>
+                <input id="SingUpFirstName" type="text" placeholder="Enter Your First Name" name="YourFirstName" value=""><br>
+                <label><em>fastName</em></label><br>
+                <input id="SingUpLastName" type="text" placeholder="Enter Your Last Name" name="YourLastName" value=""><br>
+                <label><em>emailAddress</em></label><br>
+                <input id="emailSingUp" type="email" placeholder="Enter Your Email" name="YourEmail" value=""><br>
+                <label><em>userPassword</em></label><br>
+                <input id="passwordSingUp" type="password" placeholder="Enter Your Password" name="YourPassWord" value=""><br>
+                <label><em>userCity</em></label><br>
+                <input id="city" type="text" placeholder="Enter Your City" name="YourLastName" value=""><br>
+                <label><em>userCountry</em></label><br>
+                <input id="country" type="text" placeholder="Enter Your Country" name="YourLastName" value=""><br>
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> <em>Remember me</em>
                 </label>
             </form>
 
-            <button>
-                <a href="clientPage.html">➞Sing Up</a>
-            </button>
+            <button id="SingUpButton">   
+                ➞Sing Up
+        </button>
 
         </div>
 
@@ -48,8 +49,9 @@
 
     </div>
 
-    <script src="app.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <script src="./js/signup.js"></script>
 
 
 

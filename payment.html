@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>admin page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
 </head>
 
 <body>
@@ -30,119 +30,31 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th scope="col">paymentId</th>
+
                     <th scope="col">payment</th>
                     <th scope="col">paymentClientId</th>
                     <th scope="col">paymentDate</th>
                   
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">24</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">34</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">44</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">54</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">64</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">74</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">84</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">94</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">94</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">114</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                    
-                    
-                  </tr>
+                <tbody id="paymentBody">
+
                 </tbody>
               </table>
             </section>
               <section id="Update">
                 <form>
                   <!-- paymentId	payment	paymentClientId	paymentDate -->
-                    <label><em>paymentId</em></label><br>
-                    <input type="number" placeholder="Enter Your First Name" name="YourFirstName" value=""><br>
                     <label><em>payment</em></label><br>
-                    <input type="number" placeholder="Enter Your Last Name" name="YourLastName" value=""><br>
+                    <input id="AddPayment" type="number" placeholder="Enter Your Last Name" name="YourLastName" value=""><br>
                     <label><em>paymentClientId</em></label><br>
-                    <input type="number" placeholder="Enter Your Email" name="YourEmail" value=""><br>
+                    <input id="AddClientPaymentId" type="number" placeholder="Enter Your Email" name="YourEmail" value=""><br>
                     <label><em>paymentDate</em></label><br>
-                    <input type="text" placeholder="Enter Your Email" name="YourEmail" value=""><br>
+                    <input id="AddPaymentDate" type="text" placeholder="Enter Your Email" name="YourEmail" value=""><br>
                   
                 </form>
-                <button onclick="">AddPayment</button>
+                <button id="AddPaymentButton">AddPayment</button>
+                
 
               </section>
         </div>
@@ -151,7 +63,7 @@
         
     </div>
 
-    <script src="app.js" charset="utf-8"></script>
+    <script src="./js/payment.js" charset="utf-8"></script>
 
 
 </body>
